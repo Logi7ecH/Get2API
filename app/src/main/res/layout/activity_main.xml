@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Hello, User &#128075;"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_name_menu"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="@color/gold"
+        app:strokeWidth="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/gold"
+            android:text="&#127844; Seafood"
+            android:textSize="10sp"
+            android:padding="3dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/recipe_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Recipes Found"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_row_meals"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="vertical"/>
+
+</LinearLayout>
+
